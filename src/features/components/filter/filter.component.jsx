@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import styles from "./filter.component.scss";
-import { TextField } from '@material-ui/core';
+import { TextField } from "@material-ui/core";
 
 class FilterComponent extends Component {
   constructor(props) {
     super(props);
-    this.state = {searcString: ''};
+    this.state = { searcString: "" };
   }
 
   filter(list) {
     return list.filter(el => {
       for (let key in el) {
-        if(el[key].indexOf(this.state.searcString) > -1){
-          return el
+        let str = JSON.stringify(el[key]);
+        if (str.indexOf(this.state.searcString) > -1) {
+          return el;
         }
       }
     });
@@ -24,9 +25,9 @@ class FilterComponent extends Component {
     return (
       <div className={styles.container}>
         <div>FilterComponent</div>
-        <TextField 
+        <TextField
           value={this.state.searcString}
-          onChange={e => this.setState( { searcString: e.target.value } )}
+          onChange={e => this.setState({ searcString: e.target.value })}
         />
         {this.props.children(this.filter(this.props.list))}
       </div>
