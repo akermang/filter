@@ -13,7 +13,9 @@ class FilterComponent extends Component {
   filter(list) {
     return list.filter(el => {
       for (let key in el) {
-        return el[key].indexOf(this.state.searcString) > -1;
+        if(el[key].indexOf(this.state.searcString) > -1){
+          return el
+        }
       }
     });
   }

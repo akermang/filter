@@ -5,7 +5,7 @@ import styles from "./home.page.scss";
 import FilterComponent from "../../components/filter/filter.component.jsx";
 import { List, MenuItem } from "@material-ui/core";
 
-const mockData = [{ name: "gal" }, { name: "ssss" }, { name: "gil" }];
+const mockData = [{g:"a",name: "gal" }, { name: "ssss",g:"a" }, { name: "gil" }];
 
 const HomePage = ({ t }) => (
   <div className={styles.homePage}>
