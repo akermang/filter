@@ -20,7 +20,7 @@
     "enzyme-adapter-react-16": "1.1.1",
     "es6-promise": "4.1.1",
     "eslint-plugin-react": "7.4.0",
-    "express": "4.16.2",
+    "express": "4.17.3",
     "extract-text-webpack-plugin": "3.0.2",
     "html-webpack-plugin": "2.30.1",
     "i18next": "10.2.1",
